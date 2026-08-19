@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kupaks - Brawl Stars Boosting</title>
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding: 0; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; border-bottom: 2px solid #fff; }
+        header h1 { margin: 0; font-size: 1.5em; letter-spacing: 2px; }
+        .lang-btn { background: none; color: #fff; border: 1px solid #fff; padding: 5px 10px; cursor: pointer; border-radius: 4px; font-weight: bold; }
+        .hero { text-align: center; padding: 40px 20px; }
+        .hero h1 { font-size: 2em; margin-bottom: 10px; }
+        .hero p { font-size: 1em; color: #ccc; margin-bottom: 25px; }
+        .services { display: flex; flex-direction: column; gap: 15px; padding: 20px; max-width: 400px; margin: 0 auto; }
+        .card { border: 1px solid #fff; padding: 20px; text-align: center; border-radius: 8px; background: #111; }
+        .card h2 { margin-top: 0; font-size: 1.2em; }
+        .card p { font-size: 0.9em; color: #bbb; }
+        .whatsapp-container { text-align: center; padding: 30px 20px; }
+        .whatsapp-btn { background-color: #25D366; color: #000; padding: 12px 25px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; font-size: 1em; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>KUPAKS</h1>
+    <div>
+        <button class="lang-btn" onclick="changeLang('tr')">TR</button>
+        <button class="lang-btn" onclick="changeLang('en')">EN</button>
+    </div>
+</header>
+
+<section class="hero">
+    <h1 id="title">Brawl Stars Kupa Kasma Merkezi</h1>
+    <p id="desc">Hesabını bize ver, kupanı zirveye taşıyalım.</p>
+</section>
+
+<section class="services">
+    <div class="card">
+        <h2 id="s1-title">Kupa Kasma</h2>
+        <p id="s1-desc">İstediğin karakteri istediğin kupaya ulaştırıyoruz.</p>
+    </div>
+    <div class="card">
+        <h2 id="s2-title">Ustalık Kasma</h2>
+        <p id="s2-desc">Karakter ustalık seviyelerini hızlıca yükseltiyoruz.</p>
+    </div>
+</section>
+
+<div class="whatsapp-container">
+    <a href="https://wa.me/905XXXXXXXXXX" class="whatsapp-btn" id="wa-text">WhatsApp İletişim & Sipariş</a>
+</div>
+
+<script>
+    const content = {
+        tr: { 
+            title: "Brawl Stars Kupa Kasma Merkezi", 
+            desc: "Hesabını bize ver, kupanı zirveye taşıyalım.", 
+            s1t: "Kupa Kasma", 
+            s1d: "İstediğin karakteri istediğin kupaya ulaştırıyoruz.", 
+            s2t: "Ustalık Kasma", 
+            s2d: "Karakter ustalık seviyelerini hızlıca yükseltiyoruz.",
+            wa: "WhatsApp İletişim & Sipariş"
+        },
+        en: { 
+            title: "Brawl Stars Boosting Center", 
+            desc: "Give us your account, we'll boost your trophies to the top.", 
+            s1t: "Trophy Boosting", 
+            s1d: "We bring any brawler to your desired trophy range.", 
+            s2t: "Mastery Farming", 
+            s2d: "We quickly level up your brawler mastery.",
+            wa: "WhatsApp Contact & Order"
+        }
+    };
+    function changeLang(lang) {
+        document.getElementById('title').innerText = content[lang].title;
+        document.getElementById('desc').innerText = content[lang].desc;
+        document.getElementById('s1-title').innerText = content[lang].s1t;
+        document.getElementById('s1-desc').innerText = content[lang].s1d;
+        document.getElementById('s2-title').innerText = content[lang].s2t;
+        document.getElementById('s2-desc').innerText = content[lang].s2d;
+        document.getElementById('wa-text').innerText = content[lang].wa;
+    }
+</script>
+</body>
+</html>
